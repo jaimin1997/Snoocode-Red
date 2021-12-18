@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>snoocode</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================images/bg-01.jpg-->
+	<link rel="icon" type="image/png" href="{{ url_for('static',filename='images/bg-03.png') }}"/>
+<!--===============================================================================================href="vendor/bootstrap/css/bootstrap.min.css"-->
+	<link rel="stylesheet" type="text/css" href= "{{ url_for('static',filename='vendor/bootstrap/css/bootstrap.min.css') }}">
+<!--===============================================================================================fonts/font-awesome-4.7.0/css/font-awesome.min.css-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}">
+<!--===============================================================================================fonts/Linearicons-Free-v1.0.0/icon-font.min.css-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='fonts/Linearicons-Free-v1.0.0/icon-font.min.css') }}">
+<!--===============================================================================================vendor/animate/animate.css-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='vendor/animate/animate.css') }}">
+<!--===============================================================================================vendor/css-hamburgers/hamburgers.min.css-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='vendor/css-hamburgers/hamburgers.min.css') }}">
+<!--===============================================================================================vendor/select2/select2.min.css-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='vendor/select2/select2.min.css') }}">
+<!--===============================================================================================css/util.css-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/util.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/main.css') }}">
+<!--===============================================================================================css/main.css-->
+
+</head>
+<body>
+
+
+	<div class="container-contact100" style="background-image: url('static/images/bg-02.png');">
+		<div class="wrap-contact100">
+			<form action="/submit_form" method = "POST" class="contact100-form validate-form">
+				<span  style="color: rgb(144, 250, 4);font-weight: 500;font-size: 60px;"> 
+					SnooCode
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="static/images/ProjectHEALlogo.png" alt="Aleq" width="300" height="185"/>
+				</span>
+
+				<div>
+				<span  style="color: rgb(144, 250, 4);font-weight: 500;font-size: 30px;"> 
+					Trauma/EM/Surgical Questionnaire
+				</span>
+				</div>
+
+				<br><tb><br><div>
+					<span  style="color: rgb(0, 0, 0);font-weight: 300;font-size: 13px;"> 
+						<p>Welcome to the Trauma/EM/Surgical Questionnaire of the Project HEAL Delphi Study. Please select "Yes" if the resources or facilities listed should be present in a hospital.
+						
+						The total scores will be used to develop a checklist, which hospitals can independently administer, to determine their level of health care provision based on specific specializations and overscore. These can then inform the emergency care services, referral facilities, health workers and the general public on which facility provides which level of care.</p>
+					</span>
+				</div><br><br>
+
+				<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Hospital name is required">
+					<span class="label-input100" style="color: rgb(248, 14, 170);font-weight:800;font-size: 20px;">Name Of Health Facility *</span>
+					<input class="input100" type="text"  id="facility" name="facility" placeholder="Enter Hospital Name">
+				</div>
+
+				<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate = "Snoocode address is required">
+					<span class="label-input100" style="color: rgb(248, 14, 170);font-weight:800;font-size: 20px;">Snoocode Address  *</span>
+					<input class="input100" type="text" id="add" name="add" placeholder="Enter Your Snoocode Address">
+				</div>
+
+				<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate = "District/Municipality/Metropolis is required">
+					<span class="label-input100" style="color: rgb(248, 14, 170);font-weight:800;font-size: 20px;">District/Municipality/Metropolis *</span>
+					<input class="input100" type="text" id="dis" name="dis" placeholder="Enter Your District/Municipality/Metropolis">
+				</div>
+
+				<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate = "Region is required">
+					<span class="label-input100" style="color: rgb(248, 14, 170);font-weight:800;font-size: 20px;">Region *</span>
+					<input class="input100" type="text" id="region" name="region" placeholder="Enter Your Region">
+				</div>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 1 : Presence of Trauma/Emergency/Casualty Service in the Hospital ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no1" name="choice-radio1" value="Presence of Trauma/Emergency/Casualty Service in the Hospital.">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no1" name="choice-radio1" value="No">  No</tb>
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 2 : Designated Head of Trauma (registered trauma surgeon) ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no2" name="choice-radio2" value="Designated Head of Trauma (registered trauma surgeon)">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no2" name="choice-radio2" value="No">  No</tb>
+				
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 3 : Designated Head of EM (registered Emergency medicine Specialist) ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no3" name="choice-radio3" value="Designated Head of EM (registered Emergency medicine Specialist)">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no3" name="choice-radio3" value="No">  No</tb>
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 4 : Designated medical officers in emergency medicine/Casualty ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no4" name="choice-radio4" value="Designated medical officers in emergency medicine/Casualty">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no4" name="choice-radio4" value="No">  No</tb>
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 5 : Designated Emergency medicine specialist on 24hr call ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no5" name="choice-radio5" value="Designated Emergency medicine specialist on 24hr call">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no5" name="choice-radio5" value="No">  No</tb>
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 6 : Designated trauma surgeon on 24hr call ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no6" name="choice-radio6" value="Designated trauma surgeon on 24hr call">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no6" name="choice-radio6" value="No">  No</tb>
+				 
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 7 : Designated neurosurgeon on 24hr call ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no8" name="choice-radio8" value="Designated neurosurgeon on 24hr call">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no8" name="choice-radio8" value="No">  No</tb>
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 8 : EM is available ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no9" name="choice-radio9" value="EM is available">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no9" name="choice-radio9" value="No">  No</tb>
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 9 : NEUROSURGERY ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no10" name="choice-radio10" value="NEUROSURGERY">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no10" name="choice-radio10" value="No">  No</tb>
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 10 : ORTHOPAEDIC SURGERY ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no11" name="choice-radio11" value="ORTHOPAEDIC SURGERY">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no11" name="choice-radio11" value="No">  No</tb>
+					
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 11 : ANAESTHESIA ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no12" name="choice-radio12" value="ANAESTHESIA">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no12" name="choice-radio12" value="No">  No</tb>
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 12 : EM is available ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no13" name="choice-radio13" value="EM is available">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no13" name="choice-radio13" value="No">  No</tb>
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 13 : Trauma surgery/trauma critical care ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no14" name="choice-radio14" value="Trauma surgery/trauma critical care">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no14" name="choice-radio14" value="No">  No</tb>
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 14 : Radiology ?</div><br>
+				   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no15" name="choice-radio15" value="Radiology">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no15" name="choice-radio15" value="No">  No</tb>
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 15 : Thoracic surgery ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no16" name="choice-radio16" value="Thoracic surgery">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no16" name="choice-radio16" value="No">  No</tb>
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 16 : Paediatric surgery ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no17" name="choice-radio17" value="Paediatric surgery">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no17" name="choice-radio17" value="No">  No</tb>
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 17 : Urology ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no18" name="choice-radio18" value="Urology">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no18" name="choice-radio18" value="No">  No</tb>
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 18 : Paediatrics ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no19" name="choice-radio19" value="Paediatrics">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no19" name="choice-radio19" value="No">  No</tb>
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 19 : Oral/maxillofacial surgery ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no20" name="choice-radio20" value="Oral/maxillofacial surgery">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no20" name="choice-radio20" value="No">  No</tb>
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 20 : Orthopaedic surgery ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no21" name="choice-radio21" value="Orthopaedic surgery">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no21" name="choice-radio21" value="No">  No</tb>
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 21 : Cardiac surgery ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no22" name="choice-radio22" value="Cardiac surgery">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no22" name="choice-radio22" value="No">  No</tb>
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 22 : General surgery ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no23" name="choice-radio23" value="General surgery">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no23" name="choice-radio23" value="No">  No</tb>
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 23 : Hand Surgery ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no24" name="choice-radio24" value="Hand Surgery">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no24" name="choice-radio24" value="No">  No</tb>
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 24 : Intensive care ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no25" name="choice-radio25" value="Intensive care">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no25" name="choice-radio25" value="No">  No</tb>
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 25 : Anaesthesiology ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no26" name="choice-radio26" value="Anaesthesiology">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no26" name="choice-radio26" value="No">  No</tb>
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 26 : Internal medicine ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no27" name="choice-radio27" value="Internal medicine">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no27" name="choice-radio27" value="No">  No</tb>
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 27 : Plastic surgery ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no28" name="choice-radio28" value="Plastic surgery">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no28" name="choice-radio28" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 28 :  Pulmonary medicine ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no29" name="choice-radio29" value="Vascular surgery">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no29" name="choice-radio29" value="No">  No</tb>
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 29 :  Vascular surgery ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no29" name="choice-radio29" value="Vascular surgery">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no29" name="choice-radio29" value="No">  No</tb>
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 30 : Microvascular Surgery ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no30" name="choice-radio30" value="Microvascular Surgery">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no30" name="choice-radio30" value="No">  No</tb>
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 31 : Obstetrics/gynaecology ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no31" name="choice-radio31" value="Obstetrics/gynaecology">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no31" name="choice-radio31" value="No">  No</tb>
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 32 : Ophthalmic surgery ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no32" name="choice-radio32" value="Ophthalmic surgery">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no32" name="choice-radio32" value="No">  No</tb>
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 33 : Neurosurgery ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no33" name="choice-radio33" value="Neurosurgery">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no33" name="choice-radio33" value="No">  No</tb>
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 34 : Admission team personnel ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no34" name="choice-radio34" value="Admission team personnel">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no34" name="choice-radio34" value="No">  No</tb>
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 35 : Biomedical Engineering to manage electronic devices ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no35" name="choice-radio35" value="Biomedical Engineering to manage electronic devices">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no35" name="choice-radio35" value="No">  No</tb>
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 36 : Lab Scientist ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no36" name="choice-radio36" value="Lab Scientist">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no36" name="choice-radio36" value="No">  No</tb>
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 37 : Pharmacist ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no37" name="choice-radio37" value="Pharmacist">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no37" name="choice-radio37" value="No">  No</tb>
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 38 : Toxicologist ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no38" name="choice-radio38" value="Toxicologist">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no38" name="choice-radio38" value="No">  No</tb>
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 39 : Dietician ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no39" name="choice-radio39" value="Dietician">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no39" name="choice-radio39" value="No">  No</tb>
+		
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 40 : Biostatistician ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no40" name="choice-radio40" value="Biostatistician">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no40" name="choice-radio40" value="No">  No</tb>
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 41 : Research officer ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no41" name="choice-radio41" value="Research officer">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no41" name="choice-radio41" value="No">  No</tb>
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 42 : Nurse practitioners ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no42" name="choice-radio42" value="Nurse practitioners">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no42" name="choice-radio42" value="No">  No</tb>
+		
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 43 : Physician assistants ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no43" name="choice-radio43" value="Physician assistants">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no43" name="choice-radio43" value="No">  No</tb>
+		
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 44 : ENT surgeon ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no44" name="choice-radio44" value="ENT surgeon">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no44" name="choice-radio44" value="No">  No</tb>
+		
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 45 : Phlebotomist ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no45" name="choice-radio45" value="Phlebotomist">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no45" name="choice-radio45" value="No">  No</tb>
+		
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 46 : Radiographer ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no46" name="choice-radio46" value="Radiographer">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no46" name="choice-radio46" value="No">  No</tb>
+		
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 47 : Radiologist ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no47" name="choice-radio47" value="Radiologist">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no47" name="choice-radio47" value="No">  No</tb>
+		
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 48 : Sonographer ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no49" name="choice-radio49" value="Sonographer">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no49" name="choice-radio49" value="No">  No</tb>
+		
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 49 : Respiratory therapist ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no50" name="choice-radio50" value="Respiratory therapist">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no50" name="choice-radio50" value="No">  No</tb>
+		
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 50 : Specialist Pharmacist ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no51" name="choice-radio51" value="Specialist Pharmacist">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no51" name="choice-radio51" value="No">  No</tb>
+		
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 51 : Psychiatrist or psychologist ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no52" name="choice-radio52" value="Psychiatrist or psychologist">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no52" name="choice-radio52" value="No">  No</tb>
+		
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 52 : Dispensary Technician ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no53" name="choice-radio53" value="Dispensary Technician">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no53" name="choice-radio53" value="No">  No</tb>
+		
+					
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 53 : Designated doctor in charge of the shift ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no54" name="choice-radio54" value="Designated doctor in charge of the shift">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no54" name="choice-radio54" value="No">  No</tb>
+		
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 54 : A Nursing personnel with specific training in trauma care who provides continual monitoring of the trauma patient from hospital arrival to disposition in ICU, or Patient care unit ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no55" name="choice-radio55" value="A Nursing personnel with specific training in trauma care who provides continual monitoring of the trauma patient from hospital arrival to disposition in ICU, or Patient care unit">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no55" name="choice-radio55" value="No">  No</tb>
+		
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 55 : General surgery ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no56" name="choice-radio56" value="General surgery">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no56" name="choice-radio56" value="No">  No</tb>
+		
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 56 : Recognize platysmal penetration ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no57" name="choice-radio57" value="Recognize platysmal penetration">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no57" name="choice-radio57" value="No">  No</tb>
+		
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 57 : Yankauer or other stiff suction tips ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no58" name="choice-radio58" value="Yankauer or other stiff suction tips">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no58" name="choice-radio58" value="No">  No</tb>
+		
+					
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 58 : Suction tubing ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no59" name="choice-radio59" value="Suction tubing">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no59" name="choice-radio59" value="No">  No</tb>
+		
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 59 : Suction device: powered: electrical/pneumatic ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no60" name="choice-radio60" value="Suction device: powered: electrical/pneumatic">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no60" name="choice-radio60" value="No">  No</tb>
+		
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 60 : Suction device: at least manual (bulb) or foot pump ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no61" name="choice-radio61" value="Suction device: at least manual (bulb) or foot pump">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no61" name="choice-radio61" value="No">  No</tb>
+		
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 61 : Oral or nasal airways ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no62" name="choice-radio62" value="Oral or nasal airways">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no62" name="choice-radio62" value="No">  No</tb>
+		
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 62 : Burr holes (skill plus drill or other suitable equipment) ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no63" name="choice-radio63" value="Burr holes (skill plus drill or other suitable equipment)">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no63" name="choice-radio63" value="No">  No</tb>
+		
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 63 : Surgical treatment of closed depressed skull fracture ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no64" name="choice-radio64" value="Surgical treatment of closed depressed skull fracture">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no64" name="choice-radio64" value="No">  No</tb>
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 64 : Arterial blood gas measurements ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no65" name="choice-radio65" value="Arterial blood gas measurements">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no65" name="choice-radio65" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 65 : Crystalloid ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no65" name="choice-radio65" value="Crystalloid">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no65" name="choice-radio65" value="No">  No</tb>
+		
+						
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 66 : Colloids ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no66" name="choice-radio66" value="Colloids">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no66" name="choice-radio66" value="No">  No</tb>
+		
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 67 : Monitoring of central venous pressure ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no67" name="choice-radio67" value="Monitoring of central venous pressure">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no67" name="choice-radio67" value="No">  No</tb>
+		
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 68 : Blood transfusion capabilities ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no68" name="choice-radio68" value="Blood transfusion capabilities">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no68" name="choice-radio68" value="No">  No</tb>
+		
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 69 : More advanced neurosurgical procedures ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no69" name="choice-radio69" value="More advanced neurosurgical procedures">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no69" name="choice-radio69" value="No">  No</tb>
+		
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 70 : Right-heart catheterization ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no70" name="choice-radio70" value="Right-heart catheterization">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no70" name="choice-radio70" value="No">  No</tb>
+		
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 71 : Mechanical ventilator ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no71" name="choice-radio71" value="Mechanical ventilator">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no71" name="choice-radio71" value="No">  No</tb>
+		
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 72 : Intravenous infusion set (lines and cannulas) ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no72" name="choice-radio72" value="Intravenous infusion set (lines and cannulas)">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no72" name="choice-radio72" value="No">  No</tb>
+		
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 73 : Laboratory facilities for haemoglobin or haematocrit ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no73" name="choice-radio73" value="Laboratory facilities for haemoglobin or haematocrit">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no73" name="choice-radio73" value="No">  No</tb>
+		
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 74 : CT scans ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no74" name="choice-radio74" value="CT scans">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no74" name="choice-radio74" value="No">  No</tb>
+		
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 75 : Pulse oximetry ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no75" name="choice-radio75" value="Pulse oximetry">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no75" name="choice-radio75" value="No">  No</tb>
+		
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 76 : Laryngoscope ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no76" name="choice-radio76" value="Laryngoscope">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no76" name="choice-radio76" value="No">  No</tb>
+		
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 77 : Bag–valve–mask ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no77" name="choice-radio77" value="Bag–valve–mask">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no77" name="choice-radio77" value="No">  No</tb>
+		
+		
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 78 : Cricothyroidotomy set ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no78" name="choice-radio78" value="Cricothyroidotomy set">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no78" name="choice-radio78" value="No">  No</tb>
+	
+	
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 79 : Ophthalmoscope ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no79" name="choice-radio79" value="Ophthalmoscope">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no79" name="choice-radio79" value="No">  No</tb>
+	
+	
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 80 : Glidescope video ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no80" name="choice-radio80" value="Glidescope video">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no80" name="choice-radio80" value="No">  No</tb>
+	
+	
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 81 : Otoscope ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no81" name="choice-radio81" value="Otoscope">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no81" name="choice-radio81" value="No">  No</tb>
+	
+	
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 82 : Electronic ring cutter ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no82" name="choice-radio82" value="Electronic ring cutter">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no82" name="choice-radio82" value="No">  No</tb>
+	
+					
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 83 : Central line kits ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no83" name="choice-radio83" value="Central line kits">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no83" name="choice-radio83" value="No">  No</tb>
+	
+	
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 84 : Burnsshield ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no84" name="choice-radio84" value="Burnsshield">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no84" name="choice-radio84" value="No">  No</tb>
+	
+	
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 85 : Splints(traction splints,Vacuum splints, etc) ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no85" name="choice-radio85" value="Splints(traction splints,Vacuum splints, etc)">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no85" name="choice-radio85" value="No">  No</tb>
+	
+	
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 86 : AED with additional pacing pads ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no86" name="choice-radio86" value="AED with additional pacing pads">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no86" name="choice-radio86" value="No">  No</tb>
+	
+	
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 87 : Intraosseous gun device(eg EZI IO) ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no87" name="choice-radio87" value="Intraosseous gun device(eg EZI IO)">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no87" name="choice-radio87" value="No">  No</tb>
+	
+	
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 88 : Tonometer and Slit lamp ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no88" name="choice-radio88" value="Tonometer and Slit lamp">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no88" name="choice-radio88" value="No">  No</tb>
+	
+	
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 89 : I. O. Access and drill ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="I. O. Access and drill">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+				
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 90  : CPR backboard ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="CPR backboard">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 91 : Mobile digital X-rays ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Mobile digital X-ray">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 92 : Capnography ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Capnography">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 93 : Urinary catheter ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Urinary catheter">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 94 : Basic trauma pack ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Basic trauma pack">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 95 : Fluid resuscitation ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Fluid resuscitation">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 96 : Arterial tourniquet in extreme situations ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Arterial tourniquet in extreme situations">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 97 : Gauze and bandage ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Gauze and bandage">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 98 : Stethoscope ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Stethoscope">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+					
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 99 : Underwater seal bottle (or equivalent) ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Underwater seal bottle (or equivalent)">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 100 : Chest tubes ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Chest tubes">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 101 : Magill forceps ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Magill forceps">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 102 : Intravenous needle or equivalent ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Intravenous needle or equivalent">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 103 : Monitoring and treatment of raised ICP ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Monitoring and treatment of raised ICP">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 104 : Oesophageal detector device ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Oesophageal detector device">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 105 : Blood pressure (BP) cuff ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Blood pressure (BP) cuff">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 106 : Clock or watch with second hand ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Clock or watch with second hand">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 107 : Needles & syringes ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Needles & syringes">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 108 : Nasal prongs, face mask, associated tubing ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Nasal prongs, face mask, associated tubing">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 109 : Endotracheal tube ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Endotracheal tube">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 110 : Portable X-ray ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Portable X-ray">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 111 : Oxygen supply (cylinder, concentrator or other sources) ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Oxygen supply (cylinder, concentrator or other sources)">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 112 : Blood pressure (BP) cuff ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Blood pressure (BP) cuff">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 113 : Skills and equipment for advance thoracotomy ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Skills and equipment for advance thoracotomy">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 114 : Epidural analgesia ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Epidural analgesia">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 115 : Respiratory therapy for chest injuries/rib fractures ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Respiratory therapy for chest injuries/rib fractures">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 116 : External fixation (or its functional equivalent: pins & plaster) ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="External fixation (or its functional equivalent: pins & plaster)">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 117 : Operative wound management ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Operative wound management">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 118 : Closed reduction ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Closed reduction">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 119 : Skin traction ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Skin traction">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 120 : Wrapping of pelvic fractures for haemrrhage control ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Wrapping of pelvic fractures for haemrrhage control">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 121 : Spine board ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Spine board">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 122 : Recognition of neurovascular compromise; disability prone injuries ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Recognition of neurovascular compromise; disability prone injuries">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 123 : Rib block or intrapleural block ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Rib block or intrapleural block">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 124 : Central venous lines ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Central venous lines">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 125 : Adequate pain control for chest injuries /rib fractures ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Adequate pain control for chest injuries /rib fractures">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 126 : Skeletal traction ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Skeletal traction">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 127 : Basic immobilization (sling, splint) ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Basic immobilization (sling, splint)">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 128 : Skills and equipment for intermediate thoracotomy ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Skills and equipment for intermediate thoracotomy">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 129 : Autotransfusion from chest tube ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Autotransfusion from chest tube">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 130 : Angiography ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Angiography">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 131 : Surgical skills to explore nock ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Surgical skills to explore nockn">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 132 : Contrast radiography, endoscopy ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Contrast radiography, endoscopy">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 133 : Packing, balloon tamponade for bleeding ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Packing, balloon tamponade for bleedingn">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 134 : External pressure for bleeding ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="External pressure for bleeding">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 135 : Capnography ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Capnographyn">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 136 : Avoid overhydration in the presence of raised ICP (with normal BP) ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Avoid overhydration in the presence of raised ICP (with normal BP)">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 137 : Recognize altered consciousness; internalizing signs, pupils ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Recognize altered consciousness; internalizing signs, pupils">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 138 : Internal fixation ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Internal fixation">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+				
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 139 : Resources Basic GP Specialist Tertiary ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Resources Basic GP Specialist Tertiary">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 140 : Maintenance of the requirement for protein and calories ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Maintenance of the requirement for protein and calories">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 141 : Surgical treatment of open depressed skulls fracture ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Surgical treatment of open depressed skulls fracture">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 142 : Hands: debride, fix ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Hands: debride, fix">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 143 : Fasciotomy for compartment syndrome ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Fasciotomy for compartment syndrome">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 144 : Maintain normotension and oxygenation to prevent secondary brain injury ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Maintain normotension and oxygenation to prevent secondary brain injury">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 145 : Electronic cardiac monitor ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Electronic cardiac monitor">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 146 : Proper management of immobilized patient to prevent complications ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Proper management of immobilized patient to prevent complications">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 147 : Image intensification ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Image intensification">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 148 : Tendon repair ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Tendon repair">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 149 : Hand injury: assessment and basic splinting ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Hand injury: assessment and basic splinting">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 150 : Amputation ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="Amputation">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+				<br><tb><br>&nbsp;&nbsp;&nbsp;&nbsp;<div for="">No 151 : X-ray ?</div><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="X-ray">  Yes
+					<tb>&nbsp;&nbsp;<input type="radio" id="no89" name="choice-radio89" value="No">  No</tb>
+
+				<div class="container-contact100-form-btn">
+					<div class="wrap-contact100-form-btn">
+						<div class="contact100-form-bgbtn"></div>
+						<button type = "submit" class="contact100-form-btn" style="background-image: url('static/images/bg-02.png');">
+							Submit
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+
+		<span class="contact100-more">
+				Call us on +001 345 6178
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://snoocode.com/"><img src="static/images/ProjectHEALlogo.png" alt="HTML tutorial" style="width:350px;height:200px;"></a>
+		</span>
+	</div>
+
+
+	<div id="dropDownSelect1"></div>
+
+<!--===============================================================================================vendor/jquery/jquery-3.2.1.min.js-->
+	<script src="static/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================vendor/bootstrap/js/popper.js    vendor/bootstrap/js/bootstrap.min.js-->
+	<script src="static/vendor/bootstrap/js/popper.js"></script>
+	<script src="static/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================vendor/select2/select2.min.js-->
+	<script src="static/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/js/main.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+
+</body>
+</html>
